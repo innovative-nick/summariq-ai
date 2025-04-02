@@ -23,8 +23,7 @@
 ## Technical Details
 
 ### How It Works
-```mermaid
-graph LR
+
     A[Upload File] --> B{File Type?}
     B -->|PDF| C[Extract text with PDF.js]
     B -->|DOCX| D[Parse with Mammoth.js]
