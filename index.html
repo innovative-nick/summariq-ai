@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummariQ AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.0/mammoth.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <i class="fas fa-brain logo-icon"></i>
+                <span class="logo-text">SummariQ AI</span>
+            </div>
+            <h1>Summarize Files Instantly & Turn Them into Interactive Quizzes!</h1>
+            <p>Upload notes → Get summary → Generate quiz</p>
+        </header>
+
+        <div class="upload-area">
+            <label for="fileUpload" class="file-upload-label">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Choose File</span>
+                <input type="file" id="fileUpload" accept=".pdf,.docx,.doc,.txt">
+            </label>
+            <button id="uploadBtn" class="primary-btn">
+                <i class="fas fa-upload"></i> Upload File
+            </button>
+            <div id="fileName"></div>
+        </div>
+
+        <div id="results">
+            <div class="summary-section hidden">
+                <h2>Summary</h2>
+                <div id="summaryText" class="summary-text"></div>
+                <button id="generateQuizBtn" class="primary-btn">
+                    <i class="fas fa-question-circle"></i> Generate Quiz
+                </button>
+            </div>
+
+            <div class="quiz-section hidden">
+                <div class="quiz-header">
+                    <h2>Quiz</h2>
+                    <div class="quiz-stats">
+                        <span id="questionsCount">0</span> questions available
+                    </div>
+                </div>
+                <div id="quizQuestions"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
